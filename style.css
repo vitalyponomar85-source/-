@@ -1,0 +1,354 @@
+p{
+	margin: 0;
+}
+
+a{
+	text-decoration: none;
+	color: white;
+}
+
+/*ctrl shift /*/
+
+.body{
+	width: 80%;
+	/*height: 6875px; НЕ НАДО ОГРАНИЧИВАТЬ ПО ВЫСОТЕ*/
+	border: 2px solid red;
+	background: #2A2C2F;
+	margin: auto; /*блок по центру блока*/
+	color: white;
+	font-family: "Inter", sans-serif;
+}
+
+.main{
+	width: 95%;
+	border: 1px solid blue;
+	margin: auto;
+}
+
+.main-title{
+	
+	margin: auto;
+	border: 1px solid red;
+	text-align: center;
+	/*КОМБО ДЛЯ ЛЮБОГО ТЕКСТА*/
+	font-size: clamp(1.875rem, 1.05rem + 4.125vw, 6rem);
+	font-weight: 900;
+	line-height: 100px;
+	margin-bottom: 3%;
+}
+
+.main-text{
+	
+	margin: auto;
+	border: 1px solid red;
+	text-align: center;
+	/*КОМБО ДЛЯ ЛЮБОГО ТЕКСТА*/
+	font-size: clamp(1rem, 0.825rem + 0.875vw, 1.875rem);
+	font-weight: 400;
+	line-height: 36px;
+	margin-bottom: 5%;
+}
+
+.main-image{
+	border: 1px solid red;
+	width: 80%;
+	margin-left: 10%;
+
+}
+
+.main-minitext{
+	margin: 0;
+	margin-top: 8px;
+	border: 1px solid red;
+	font-size: 10px;
+	font-weight: 300;
+	line-height: 14px;
+	letter-spacing: 1.5px;
+	text-transform: uppercase;
+}
+
+
+.header{
+	height: 52px;
+	border: 2px solid pink;
+	margin: auto;
+	margin-top: 28px;
+	margin-bottom: 56px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+
+.about{
+	height: 429px;
+	border: 2px solid pink;
+	margin: auto;
+}
+
+.gallery{
+	width: 1184px;
+	border: 2px solid lime;
+	margin: auto;
+	display: grid; /*сетки*/
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	grid-template-rows: 1fr 1fr 1fr;
+	gap: 16px;
+}
+
+.places{
+	border: 2px solid yellow;
+	margin: auto;
+	margin-bottom: 92px;
+}
+
+
+.place{
+	width: 100%;
+	border: 3px solid rebeccapurple;
+	display: flex;
+	/*центровка эл-ов*/
+	justify-content: space-around;
+	align-items: center;
+	margin-top: 80px;
+	gap: 20px;
+}
+
+
+.place-title{
+	margin: 0;
+	font-size: clamp(2rem, 1.5rem + 2.5vw, 4.5rem);
+	font-weight: 900;
+	line-height: 76px;
+	margin-bottom: 48px;
+}
+
+.place-hint{
+	margin: 0;
+	font-size: 12px;
+	font-weight: 400;
+	line-height: 12px;
+	color: #AAAAAA;
+	letter-spacing: 2px;
+	margin-top: 106px;
+	margin-bottom: 12px;
+}
+
+
+.place-link{
+	margin: 0;
+	font-size: 18px;
+	font-weight: 400;
+	line-height: 22px;
+	color: white;
+}
+
+
+.place-text{
+	margin: 0;
+	font-size: 18px;
+	font-weight: 400;
+	line-height: 163%;
+	color: white;
+	margin-top: 38px;
+}
+
+.place-image{
+	width: 35vw;
+}
+
+
+
+
+.baikal{
+	width: 1184px;
+	border: 2px solid aqua;
+	margin: auto;
+	background: url("image2.png");
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.baikal-title{
+	margin: 0;
+	position: relative;
+	z-index: 2;
+	font-size: 72px;
+	font-weight: 900;
+	line-height: 76px;
+	width: 560px;
+	border: 1px solid red;
+	margin-bottom: 32px;
+	text-align: center;
+	transition: 2s;
+}
+
+/*ПСЕВДОКЛАСС*/
+
+
+
+
+.baikal-text{
+	width: 360px;
+	text-align: center;
+	margin: 0;
+	position: relative;
+	z-index: 2;
+	font-size: 18px;
+	font-weight: 400;
+	line-height: 22px;
+}
+
+.overlay{
+	width: 1184px;
+	background: black;
+	position: absolute;
+	top: 0;
+	left: 0;
+	opacity: 0.3;
+	z-index: 1;
+	transition: 0.3s;
+}
+
+
+.baikal:hover .overlay{
+	opacity: 0.6;
+	cursor: pointer;
+}
+
+
+
+/*.overlay:hover{
+	opacity: 0.6;
+	cursor: pointer;
+}*/
+
+
+
+
+.footer{
+	width: 1184px;	
+	height: 18px;
+	border: 2px solid orange;
+	margin: auto;
+	display: flex;
+	justify-content: space-between;
+	margin-top: 92px;
+
+}
+
+/*как только я дошел до этой ширины*/
+/*свойства на сайте перезапишутся*/
+/*переход компьютер - ноутбук*/
+
+@media (max-width: 1280px) {
+
+	
+
+
+	.gallery{
+		width: 928px;
+		grid-template-columns: 1fr 1fr 1fr;
+		grid-template-rows: 1fr 1fr 1fr 1fr;
+		gap: 14px;
+	}
+
+	.gallery-image{
+		width: 300px;
+		height: 225px;
+	}
+
+	.baikal{
+		width: 1024px;
+	}
+
+	.overlay{
+		width: 1024px;
+	}
+
+	.footer{
+		width: 928px;
+	}
+
+
+}
+
+
+
+
+
+
+@media (max-width: 1024px) {
+
+
+
+	.gallery{
+		width: 720px;
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+		gap: 16px;
+	}
+
+	.gallery-image{
+		width: 352px;
+		height: 264px;
+	}
+
+	.place-hint{
+		margin-top: 0;
+	}
+
+
+
+	.baikal{
+		width: 768px;
+	}
+
+	.overlay{
+		width: 768px;
+	}
+
+	.footer{
+		width: 720px;
+	}
+}
+
+@media (max-width: 768px) {
+
+	.main-title{
+		line-height: 44px;
+	}
+
+	.main-text{
+		line-height: 20px;
+	}
+
+
+	.place{
+		flex-direction: column;
+	}
+
+	.footer{
+		flex-direction: column;
+	}
+
+	.footer-links{
+		display: flex;
+		flex-direction: column;
+	}
+
+
+}
+
+
+
+
+
+@media (max-width: 320px) {
+
+	
+}
+
